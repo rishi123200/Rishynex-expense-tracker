@@ -144,6 +144,6 @@ def profile():
         count=db.execute("SELECT COUNT(*) n FROM expenses WHERE user_id=?",(session["user_id"],)).fetchone()["n"]
     return render_template("profile.html",user=user,count=count)
 
-if __name__=="__main__":
+if __name__ == "__main__":
     init_db()
-    app.run(debug=False)
+    app.run()
